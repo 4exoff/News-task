@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Api Page</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <link href="css/main.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="newsApp">
+    <nav class="menu menu-open" id="theMenu" ng-controller="CategoryCtrl">
+        <div class="menu-wrap">
+            <h1 class="logo"><a href="/">All Api News</a></h1>
+            <i class="fa fa-window-close" aria-hidden="true"></i>
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="category in categoryes">
+                    <a href="#/category/{{category}}">{{category}}</a>
+                </li>
+            </ul>
+            <h1 class="logo"><a href="#/featured">Featured News</a></h1>
+            <h1 class="logo"><a href="#/addition"> My News</a></h1>
+        </div>
+        <div id="menuToggle"><i class="fa fa-bars" aria-hidden="true"></i></div>
+    </nav>
+
+    <ng-view></ng-view>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.4/angular-route.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+    <script src="js/controllers/app.js"></script>
+
+
+</body>
+
+</html>

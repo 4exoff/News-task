@@ -1,0 +1,26 @@
+<div class="container addition-template">
+    <div class="row ">
+        <div class="form-group">
+            <label for="name">Name news:</label>
+            <input type="text" class="form-control" id="name" ng-model="name">
+        </div>
+        <div class="form-group">
+            <label for="comment">Text news:</label>
+            <textarea class="form-control" rows="5" id="comment" ng-model="description"></textarea>
+        </div>
+        <h4><a ng-click="save(name,description)" class="btn btn-default save-for-late">Add to save</a></h4>
+    </div>
+    <div class="row">
+        <ul class="list-group">
+                <li class="list-group-item col-lg-4 addition" ng-repeat="mynews in myNewsLocal">
+                    <p>
+                        <h1><a href="#/{{mynews.name}}">{{mynews.name}}</a></h1>
+                    </p>
+                    <p>
+                        <h3>{{mynews.description}}</h3>
+                    </p>
+                    <h4><a ng-click="delete(mynews.name)" class="btn btn-default save-for-late">Delete from saved</a></h4>
+                </li>
+            </ul>
+    </div>
+</div>
